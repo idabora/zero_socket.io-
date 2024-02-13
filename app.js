@@ -17,6 +17,9 @@ app.get('/',(req,res)=>{
     
 });
 
+/*io.on('connection', (socket) => { ... }):
+ This code block listens for incoming connections from clients. When a new client connects to the server, the provided callback function is executed. The socket object represents the connection between the server and the client. */
+
     io.on('connection',(socket)=>{
         console.log("User Connected");
         socket.on('disconnect',()=>{
